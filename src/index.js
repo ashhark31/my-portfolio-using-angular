@@ -9,10 +9,13 @@ const path = require('path');
 const app = express();
 port = process.env.PORT;
 
+const client = require("./mongodb")
+const conn = client.db("portfolio")
+
 //------ for mongoAtlas (cloud) ------
-const mongoose = require("mongoose")
-require("./mongodb")
-const conn = mongoose.connection
+// const mongoose = require("mongoose")
+// require("./mongodb")
+// const conn = mongoose.connection
 
 app.use(bodyParser.json())
 app.use((req,res,next) => {
