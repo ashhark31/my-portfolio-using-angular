@@ -34,7 +34,7 @@ app.get("*", function(req,res) {
 })
 
 app.post('/welcomePage', (req,res) => {
-    conn.collection('welcomePage').find({}).toArray((error,result) => {
+    conn.collection('welcomePage').find({}).sort({_id:1}).toArray((error,result) => {
         if(error){
             console.log(error);
         }
@@ -45,7 +45,7 @@ app.post('/welcomePage', (req,res) => {
 })
 
 app.post('/aboutPage', (req,res) => {
-    conn.collection('aboutPage').find({}).toArray((error,result) => {
+    conn.collection('aboutPage').find({}).sort({_id:1}).toArray((error,result) => {
         if(error){
             console.log(error);
         }
@@ -56,7 +56,7 @@ app.post('/aboutPage', (req,res) => {
 })
 
 app.post('/educationPage', (req,res) => {
-    conn.collection('educationPage').find({}).toArray((error,result) => {
+    conn.collection('educationPage').find({}).sort({_id:1}).toArray((error,result) => {
         if(error){
             console.log(error);
         }
@@ -67,7 +67,7 @@ app.post('/educationPage', (req,res) => {
 })
 
 app.post('/experiencePage', (req,res) => {
-    conn.collection('experiencePage').find({}).toArray((error,result) => {
+    conn.collection('experiencePage').find({}).sort({_id:1}).toArray((error,result) => {
         if(error){
             console.log(error);
         }
@@ -78,7 +78,7 @@ app.post('/experiencePage', (req,res) => {
 })
 
 app.post('/skillsPage', (req,res) => {
-    conn.collection('skillsPage').find({}).toArray((error,result) => {
+    conn.collection('skillsPage').find({}).sort({_id:1}).toArray((error,result) => {
         if(error){
             console.log(error);
         }
@@ -89,18 +89,7 @@ app.post('/skillsPage', (req,res) => {
 })
 
 app.post('/projectsPage', (req,res) => {
-    conn.collection('projectsPage').find({}).toArray((error,result) => {
-        if(error){
-            console.log(error);
-        }
-        res.send(result);
-    })
-}, (error) => {
-    res.send(error);
-})
-
-app.post('/projectsPage', (req,res) => {
-    conn.collection('projectsPage').find({}).toArray((error,result) => {
+    conn.collection('projectsPage').find({}).sort({_id:1}).toArray((error,result) => {
         if(error){
             console.log(error);
         }
@@ -111,7 +100,7 @@ app.post('/projectsPage', (req,res) => {
 })
 
 app.post('/achievementsPage', (req,res) => {
-    conn.collection('achievementsPage').find({}).toArray((error,result) => {
+    conn.collection('achievementsPage').find({}).sort({_id:1}).toArray((error,result) => {
         if(error){
             console.log(error);
         }
@@ -122,7 +111,7 @@ app.post('/achievementsPage', (req,res) => {
 })
 
 app.post('/contactPage', (req,res) => {
-    conn.collection('contactPage').find({}).toArray((error,result) => {
+    conn.collection('contactPage').find({}).sort({_id:1}).toArray((error,result) => {
         if(error){
             console.log(error);
         }
